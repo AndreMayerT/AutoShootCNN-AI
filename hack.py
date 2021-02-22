@@ -25,13 +25,16 @@ monitor = {"top": 380, "left": 800, "width": W, "height": H}
 threshold = 0.35
 nms_threshold = 0.3
 
+# classes directory
 classesFile = 'C:\\Users\\andre\\PycharmProjects\\mouseTest\\coco.names'
 classNames = []
 with open(classesFile, 'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
-
+# model directory
 modelCfg = 'C:\\Users\\andre\\PycharmProjects\\mouseTest\\yolov3.cfg'
+
+# weights directory
 modelWeights = 'C:\\Users\\andre\\PycharmProjects\\mouseTest\\yolov3.weights'
 
 net = cv2.dnn.readNetFromDarknet(modelCfg, modelWeights)
