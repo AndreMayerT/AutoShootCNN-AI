@@ -38,6 +38,8 @@ modelCfg = 'C:\\Users\\andre\\PycharmProjects\\mouseTest\\yolov3.cfg'
 modelWeights = 'C:\\Users\\andre\\PycharmProjects\\mouseTest\\yolov3.weights'
 
 net = cv2.dnn.readNetFromDarknet(modelCfg, modelWeights)
+
+# run it with NVIDIA CUDA for better performance
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
 
