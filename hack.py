@@ -48,7 +48,7 @@ def determine_movement(mid_x, mid_y,width=800, height=600):
     y_move = 0.5-mid_y
     keys.keys_worker.SendInput(keys.keys_worker.Mouse(0x0001, -1*int(x_move*width), -1*int(y_move*height)))
 
-def shoot(x, mira_x, y, mira_y, h, w):
+def shoot(x, aim_x, y, aim_y, h, w):
     keys.directMouse(0, 0, fire_key)
     time.sleep(0.3)
     keys.directMouse(0, 0, release_key)
