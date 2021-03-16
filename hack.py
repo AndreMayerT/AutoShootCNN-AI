@@ -16,10 +16,10 @@ hold = 0.4
 
 sct = mss.mss()
 # limite mira: 810, 485, comeco: 796, 481
-mira_x = 157
-mira_y = 157
-mira_xl = 163
-mira_yl = 163
+aim_x = 157
+aim_y = 157
+aim_xl = 163
+aim_yl = 163
 W, H = (320, 320)
 monitor = {"top": 380, "left": 800, "width": W, "height": H}
 threshold = 0.35
@@ -94,8 +94,8 @@ def findObjects(outputs, img):
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
         cv2.putText(img, f'{classNames[classIDs[i]].upper()} {int(confs[i]*100)}%', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
         #print(indices)
-        shoot1 = Thread(target=shoot, args=[x, mira_x, y, mira_y, h, w])
-        if x < mira_x and x + w > mira_xl and y < mira_y and y + h > mira_yl:
+        shoot1 = Thread(target=shoot, args=[x, aim_x, y, aim_y, h, w])
+        if x < aim_x and x + w > aim_xl and y < aim_y and y + h > aim_yl:
             shoot1.start()
 
 
