@@ -15,7 +15,7 @@ release_key = keys.mouse_lb_release
 hold = 0.4
 
 sct = mss.mss()
-# limite mira: 810, 485, comeco: 796, 481
+# aim limit: 810, 485, start: 796, 481
 aim_x = 157
 aim_y = 157
 aim_xl = 163
